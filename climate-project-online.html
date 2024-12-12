@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Kit Transue" />
+  <title>Project - Climate Action</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">
+
+html {
+font-size: 100%;
+overflow-y: scroll;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+body {
+color: #444;
+font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+font-size: 12px;
+line-height: 1.7;
+padding: 1em;
+margin: auto;
+max-width: 42em;
+background: #fefefe;
+}
+a {
+color: #0645ad;
+text-decoration: none;
+}
+a:visited {
+color: #0b0080;
+}
+a:hover {
+color: #06e;
+}
+a:active {
+color: #faa700;
+}
+a:focus {
+outline: thin dotted;
+}
+*::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+*::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+a::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+a::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+p {
+margin: 1em 0;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #111;
+line-height: 125%;
+margin-top: 2em;
+font-weight: normal;
+}
+h4, h5, h6 {
+font-weight: bold;
+}
+h1 {
+font-size: 2.5em;
+}
+h2 {
+font-size: 2em;
+}
+h3 {
+font-size: 1.5em;
+}
+h4 {
+font-size: 1.2em;
+}
+h5 {
+font-size: 1em;
+}
+h6 {
+font-size: 0.9em;
+}
+blockquote {
+color: #666666;
+margin: 0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr {
+display: block;
+height: 2px;
+border: 0;
+border-top: 1px solid #aaa;
+border-bottom: 1px solid #eee;
+margin: 1em 0;
+padding: 0;
+}
+pre, code, kbd, samp {
+color: #000;
+font-family: monospace, monospace;
+_font-family: 'courier new', monospace;
+font-size: 0.98em;
+}
+pre {
+white-space: pre;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+b, strong {
+font-weight: bold;
+}
+dfn {
+font-style: italic;
+}
+ins {
+background: #ff9;
+color: #000;
+text-decoration: none;
+}
+mark {
+background: #ff0;
+color: #000;
+font-style: italic;
+font-weight: bold;
+}
+sub, sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+sup {
+top: -0.5em;
+}
+sub {
+bottom: -0.25em;
+}
+ul, ol {
+margin: 1em 0;
+padding: 0 0 0 2em;
+}
+li p:last-child {
+margin-bottom: 0;
+}
+ul ul, ol ol {
+margin: .3em 0;
+}
+dl {
+margin-bottom: 1em;
+}
+dt {
+font-weight: bold;
+margin-bottom: .8em;
+}
+dd {
+margin: 0 0 .8em 2em;
+}
+dd:last-child {
+margin-bottom: 0;
+}
+img {
+border: 0;
+-ms-interpolation-mode: bicubic;
+vertical-align: middle;
+}
+figure {
+display: block;
+text-align: center;
+margin: 1em 0;
+}
+figure img {
+border: none;
+margin: 0 auto;
+}
+figcaption {
+font-size: 0.8em;
+font-style: italic;
+margin: 0 0 .8em;
+}
+table {
+margin-bottom: 2em;
+border-bottom: 1px solid #ddd;
+border-right: 1px solid #ddd;
+border-spacing: 0;
+border-collapse: collapse;
+}
+table th {
+padding: .2em 1em;
+background-color: #eee;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+}
+table td {
+padding: .2em 1em;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+vertical-align: top;
+}
+.author {
+font-size: 1.2em;
+text-align: center;
+}
+@media only screen and (min-width: 480px) {
+body {
+font-size: 14px;
+}
+}
+@media only screen and (min-width: 768px) {
+body {
+font-size: 16px;
+}
+}
+@media print {
+* {
+background: transparent !important;
+color: black !important;
+filter: none !important;
+-ms-filter: none !important;
+}
+body {
+font-size: 12pt;
+max-width: 100%;
+}
+a, a:visited {
+text-decoration: underline;
+}
+hr {
+height: 1px;
+border: 0;
+border-bottom: 1px solid black;
+}
+a[href]:after {
+content: " (" attr(href) ")";
+}
+abbr[title]:after {
+content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+content: "";
+}
+pre, blockquote {
+border: 1px solid #999;
+padding-right: 1em;
+page-break-inside: avoid;
+}
+tr, img {
+page-break-inside: avoid;
+}
+img {
+max-width: 100% !important;
+}
+@page :left {
+margin: 15mm 20mm 15mm 10mm;
+}
+@page :right {
+margin: 15mm 10mm 15mm 20mm;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3 {
+page-break-after: avoid;
+}
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Project - Climate Action</h1>
+<p class="author">Kit Transue</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#online-version-differences" id="toc-online-version-differences">Online Version Differences</a>
+<ul>
+<li><a href="#support" id="toc-support">Support</a></li>
+</ul></li>
+<li><a href="#project-mechanics" id="toc-project-mechanics">Project
+Mechanics</a>
+<ul>
+<li><a href="#github" id="toc-github">GitHub</a></li>
+<li><a href="#codespace-and-postgresql" id="toc-codespace-and-postgresql">Codespace and PostgreSQL</a></li>
+<li><a href="#supporting-files" id="toc-supporting-files">Supporting
+Files</a></li>
+<li><a href="#assignments" id="toc-assignments">Assignments</a></li>
+<li><a href="#artifacts" id="toc-artifacts">Artifacts</a>
+<ul>
+<li><a href="#sync" id="toc-sync">Sync</a></li>
+</ul></li>
+<li><a href="#notes-and-special-care" id="toc-notes-and-special-care">Notes and Special Care</a></li>
+</ul></li>
+<li><a href="#project" id="toc-project">Project</a>
+<ul>
+<li><a href="#overview" id="toc-overview">Overview</a></li>
+<li><a href="#artifacts-1" id="toc-artifacts-1">Artifacts</a>
+<ul>
+<li><a href="#requirements-statement" id="toc-requirements-statement">Requirements Statement</a></li>
+<li><a href="#design" id="toc-design">Design</a></li>
+<li><a href="#sql" id="toc-sql">SQL</a></li>
+</ul></li>
+<li><a href="#tools" id="toc-tools">Tools</a>
+<ul>
+<li><a href="#analysis-and-design" id="toc-analysis-and-design">Analysis
+and Design</a></li>
+<li><a href="#sql-1" id="toc-sql-1">SQL</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="online-version-differences">Online Version Differences</h1>
+<p>This project was originally developed as a collaborative exercise,
+with teams doing a whole project, using class time as a meeting space
+for people to split up work responsibilities.</p>
+<p>This form of collaboration requires meetings at least three times a
+week, and that simply isn’t compatible with the scheduling flexibility
+students depend on in an online course.</p>
+<p>In the adapted format, I provide roughly the amount setup work that
+might be done by other members of a team. For writing queries, I let you
+choose those that you are best prepared to write or are most interested
+in, which is very much like a project “signup” in some Agile processes.
+You will be working in Git, and sharing your work by committing and
+pushing it to a common repository. I expect your work to be
+self-contained and to work in my copy of the repository just as it does
+in yours. These mechanics are similar to what they would be on a
+team.</p>
+<p>As you go through this online adaptation, I encourage you to think
+about how you would have come up with anything I provide: you or someone
+like you would be expected to create these artifacts when building a
+product from the beginning.</p>
+<p>The good part about a group project is that no one should be
+overwhelmed by the work: someone will be there to support you. I will
+perform that role. Let me know how you’re doing!</p>
+<p>Something I like about this adapted format for the project is that
+everyone has the chance to see the richness of SQL: instead of one
+member grabbing the hardest or easiest or most-fun, you can all see
+those parts. I think this can be a very good experience.</p>
+<h2 id="support">Support</h2>
+<p>The goal of the project is to let you experience how all the
+technologies and techniques you have practiced in this class–from
+requirements gathering to answering questions with SQL–fit together.</p>
+<p>This is an introduction that covers a lot of material. I hope that as
+you go over it, each step will feel familiar. At the same time, I hope
+this gives you new perspectives and raises new questions as you connect
+the pieces from the course.</p>
+<p>I am here to answer any of these questions. Send an email or arrange
+a Zoom. The online format makes it hard for me to know what areas you
+are confident about and what areas I have not explained in a way that
+resonates for you. A short email or a Zoom can help us quickly bridge
+this online gap, and I hope would be rewarding for both of us.</p>
+<p>Let me help.</p>
+<h1 id="project-mechanics">Project Mechanics</h1>
+<h2 id="github">GitHub</h2>
+<p>Throughout this project, you will be working in a single GitHub
+repository. Your work will build on earlier commits.</p>
+<p>I will create a repository specifically for you, and invite you to
+collaborate on it. This means we can both push to the same branch, which
+is how members often work within a team. I think it is fine if you stick
+with the “main” branch, but I can work with other branches if you let
+know how you want me to use them.</p>
+<h2 id="codespace-and-postgresql">Codespace and PostgreSQL</h2>
+<p>The repository will be DevContainer/Codespaces enabled, so it will
+configure a PostgreSQL database server for the project to work with.
+This will start when you start your Codespace.</p>
+<p>The database will start empty; it is your responsibility to update
+the SQL/scripting so it populates successfully from scratch.</p>
+<h2 id="supporting-files">Supporting Files</h2>
+<p>I will provide:</p>
+<ul>
+<li>reset.sh (to drop and recreate the database)</li>
+<li>a script to run both the SQL to create tables and to populate tables
+(create.sh)</li>
+<li>some SQL for creating and populating the database so it matches the
+sample data</li>
+</ul>
+<p>You will have to modify or add to these to create a running sample of
+the database for the customer to evaluate.</p>
+<h2 id="assignments">Assignments</h2>
+<p>The assignments are provided in Canvas. They start with some design
+questions, then move into implementation.</p>
+<p>For each assignment, you should commit and push/sync your code in
+GitHub, then indicate you are complete in Canvas.</p>
+<h2 id="artifacts">Artifacts</h2>
+<p>Remember that you are building code (mostly SQL) that a customer
+would try out to evaluate your prototype, and that would be used in the
+future to work with the database after it has grown to have much more
+data. The queries are not questions that need an answer today, but tools
+that will provide an answer today and again in the future.</p>
+<p>I will evaluate your code <em>in my own Codespace</em>. I can see
+only what you have published, and evaluate only what happens when I run
+your scripts. The Codespaces environment makes it much easier to bundle
+your work and show it to someone else, so you should not have challenges
+with this, but I may ask you to look into any issues that show up when
+your code is run in a different Codespace.</p>
+<h3 id="sync">Sync</h3>
+<p>I will be looking at our shared repository on GitHub. Your Codespace
+creates a clone of that respository–the one we share is the remote
+“origin” in the Codespace.</p>
+<p>You must “Sync” in VSCode (or “git push” at the Terminal) to copy
+your work up to the shared repository.</p>
+<p>If you want to confirm what we can both see, visit the GitHub
+repository. (This is the page that you start the Codespace from.) That
+page should show the synched versions of files and the log message from
+your latest commit.</p>
+<h2 id="notes-and-special-care">Notes and Special Care</h2>
+<p>Some areas of this scenario require special care:</p>
+<ul>
+<li>people appear in lots of reports–since these are often the same
+people, normalize (or look for a single source of truth)</li>
+<li>a Sale has a many-to-many relationship with Merchandise (one order
+can be for more than one item, and different customers may order
+Merchandise at different times on different orders)</li>
+<li>be careful that the “Quantity” attribute is attached to the
+appropriate entity</li>
+</ul>
+<h1 id="project">Project</h1>
+<h2 id="overview">Overview</h2>
+<p>The project is to construct a database for a sample organization
+working on climate action. The process of developing the database will
+follow the model presented in class: you will suggest requirements on
+the basis of an initial interview; then you create a data model that
+will go on to become the structure of the database. You will write SQL
+to create, populate, update, and report on the database to address the
+customer’s needs.</p>
+<h2 id="artifacts-1">Artifacts</h2>
+<p>I will invite you to collaborate on a shared repository.</p>
+<p>This repository will be the Single Source of Truth for your project.
+Git keeps a history of your commits, so I encourage you to commit
+anything you think is interesting (so it is logged). Git’s history
+includes deleted files, so feel free to delete any files or parts of
+files that are distracting or that you don’t want to show as your final
+product.</p>
+<p>Here are the artifacts I will be asking for in the project. The order
+follows the Analysis/Design/Implementation methodology. You should
+commit all artifacts to your repository and sync with the origin on
+GitHub.</p>
+<h3 id="requirements-statement">Requirements Statement</h3>
+<p>A Statement of Scope is not required. If you write one, I will
+provide feedback on it. If you want to try seeing how a generative AI
+produces a Statement of Scope, you are welcome to experiment with that,
+too. If you use generative AI, watch that the AI does not try to commit
+you to features or standards that the customer did not ask for. (These
+features would probably raise their costs without providing value.)</p>
+<h3 id="design">Design</h3>
+<p>You will adapt the design in a couple of places. The project includes
+a Diagrams.net diagram of the sample documents (without normalization,
+relations, etc.).</p>
+<p>If you use the design tools to help with your table additions, please
+add/commit your design files so they can be part of your project
+documentation!</p>
+<h3 id="sql">SQL</h3>
+<p>The project will require several batches of SQL; each will have a
+different responsibility and will be needed at different stages of the
+database’s lifetime. The project framework includes these files; you
+should adapt them as necessary.</p>
+<ul>
+<li>SQL statements to complete the table structure from an empty
+database</li>
+<li>SQL to populate the database with the sample data</li>
+<li>queries to answer questions the organization is interested in</li>
+</ul>
+<h2 id="tools">Tools</h2>
+<h3 id="analysis-and-design">Analysis and Design</h3>
+<p>During Analysis and Design, you will be working with the sample data
+(in .html) and the ERD (in .drawio) format. The DevContainer includes
+the hediet.vscode-drawio in your Codespace so you can work with .drawio
+files directly. However, VSCode may not be the best tool for this work:
+for the ERD you may want more screen space than the Codespace
+window.</p>
+<p>The Codespace treats .html as source; the samples may be easier to
+read in preview or in a browser directly.</p>
+<p>You can download both the .html and .drawio files from the GitHub
+repository viewer (<em>not</em> the Codespace) to your local machine and
+work with them there.</p>
+<p>Or–even better: clone the repository locally and work in the cloned
+directory. You can use VSCode or the Git command line to sync.</p>
+<h3 id="sql-1">SQL</h3>
+<p>Use the Codespace and the web-based VSCode when writing SQL: it has
+the PostgreSQL installed and set up, and SQLTools configured to work
+with it. I will use this Codespace configuration to test your code.</p>
+</body>
+</html>
